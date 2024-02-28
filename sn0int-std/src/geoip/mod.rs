@@ -20,6 +20,7 @@ pub trait Maxmind: Sized {
     fn cache_path(cache_dir: &Path) -> Result<PathBuf> {
         // use system path if exists
         for path in &[
+            "private",
             // Archlinux
             "/usr/share/GeoIP/",
             // OpenBSD
